@@ -5,13 +5,14 @@ body {
   font-weight: bold; /* テキストを太字にする */
   margin: 0;
   padding: 0;
-  background-color: coral;
+  background-color: #DFD0B8;
+  transition: background-color 0.1s ease; /* 色の変化を0.1秒で行う */
 }
 
 .question-container {
   max-width: 600px;
   margin: 20px auto;
-  background-color: #C40C0C;
+  background-color: #777777;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -32,7 +33,7 @@ body {
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #FF8A08;
+  background-color: #153448;
   color: #FFC100;
   font-size: 16px;
   cursor: pointer;
@@ -41,7 +42,7 @@ body {
 
 #options-container button:hover {
   font-weight: bold; /* テキストを太字にする */
-  background-color: #FF6500;
+  background-color: #3C5B6F;
 }
 
 .hidden {
