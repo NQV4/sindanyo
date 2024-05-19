@@ -1,6 +1,7 @@
 
 
 let points = 100;
+let niji = false;
 function pointreload(){
   // const outputElement = document.getElementById("output");
   
@@ -158,12 +159,90 @@ function selectg(choice) {
   if(choice == 'Gnof'){points -= 10;}
     pointreload()
 
-
+    // points = 100;
+    document.body.style.backgroundColor = "white";
     setTimeout(() => {
       document.getElementById('question-text').textContent = '終点';
       document.getElementById('options-container').innerHTML = `あなたの点数は${points}でした`;
       document.getElementById('options-container').classList.remove('hidden');
-    }); 
+      if(points == 100)
+        {
+          
+          setTimeout(() => {document.body.style.backgroundColor = "red";} ,100)
+          setTimeout(() => {document.body.style.backgroundColor = "white";} ,200)
+          setTimeout(() => {document.body.style.backgroundColor = "red";} ,300)
+          var questionContainer = document.querySelector(".question-container");
+          questionContainer.style.backgroundColor = "yellow";
+          document.getElementById('question-report').innerHTML = `マルクス レーニン級`;
+        }
+      if(points < 100 &&points > 80)
+        {
+          setTimeout(() => {document.body.style.backgroundColor = "red";} ,100)
+          setTimeout(() => {document.body.style.backgroundColor = "white";} ,200)
+          setTimeout(() => {document.body.style.backgroundColor = "red";} ,300)
+          var questionContainer = document.querySelector(".question-container");
+          questionContainer.style.backgroundColor = "orange";
+          document.getElementById('question-report').innerHTML = `マルクス レーニンの手下のペットくらい`;
+        }
+        if(points < 81 &&points > 60)
+          {
+            setTimeout(() => {document.body.style.backgroundColor = "red";} ,100)
+            setTimeout(() => {document.body.style.backgroundColor = "white";} ,200)
+            setTimeout(() => {document.body.style.backgroundColor = "red";} ,300)
+            var questionContainer = document.querySelector(".question-container");
+            questionContainer.style.backgroundColor = "blue";
+            document.getElementById('question-report').innerHTML = `スターリン級`;
+          }
+      if(points < 61 && points > 40)
+        {
+          setTimeout(() => {document.body.style.backgroundColor = "red";} ,100)
+          setTimeout(() => {document.body.style.backgroundColor = "white";} ,200)
+          setTimeout(() => {document.body.style.backgroundColor = "red";} ,300)
+          var questionContainer = document.querySelector(".question-container");
+          questionContainer.style.backgroundColor = "yellow";
+          document.getElementById('question-report').innerHTML = `まぁまぁやるやん`;
+        }
+      if(points < 41 && points > 29)
+        {
+          setTimeout(() => {document.body.style.backgroundColor = "pink";} ,100)
+          setTimeout(() => {document.body.style.backgroundColor = "white";} ,200)
+          setTimeout(() => {document.body.style.backgroundColor = "pink";} ,300)
+          var questionContainer = document.querySelector(".question-container");
+          questionContainer.style.backgroundColor = "orange";
+          document.getElementById('question-report').innerHTML = `ゴルバチョフ級`;
+        }
+        if(points < 30 && points > 0)
+          {
+            setTimeout(() => {document.body.style.backgroundColor = "blue";} ,100)
+            setTimeout(() => {document.body.style.backgroundColor = "white";} ,200)
+            setTimeout(() => {document.body.style.backgroundColor = "blue";} ,300)
+            var questionContainer = document.querySelector(".question-container");
+            questionContainer.style.backgroundColor = "green";
+            document.getElementById('question-report').innerHTML = `伸びしろしかない`;
+          }
+      if(points < 1)
+        {
+          document.getElementById('question-report').innerHTML = `〇ね`;
+          niji = true;
+        }
+    }, 100); 
 
     document.getElementById('options-container').classList.remove('hidden');
   }; 
+
+  
+  function changeBackground() {
+    if(niji)
+      {
+    const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00']; // 変更したい背景色の配列
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+    const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.color = randomColor1;
+    const randomColors = colors[Math.floor(Math.random() * colors.length)];
+    var questionContainer = document.querySelector(".question-container");
+    questionContainer.style.backgroundColor = randomColors;
+  }
+  }
+
+  setInterval(changeBackground, 100); // 5000ミリ秒ごと（5秒ごと）に背景色を変更
