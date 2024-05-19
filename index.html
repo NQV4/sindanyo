@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questionnaire</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="question-container" id="question-container">
+  <p id="question-text">マルクスは何主義？</p>
+  <div id="options-container">
+    <button onclick="selecta('Anoa')">資本主義</button>
+    <button onclick="selecta('Anob')">社会主義</button>
+    <button onclick="selecta('Anoc')">両方といってもあながち間違いでは無い</button>
+    
+  </div>
+</div>
+<!-- <div id="output"></div> -->
+<div id="answer-container" class="hidden">
+  <p id="answer"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* styles.css */
+
+body {
+  font-family: 'Arial Black', Arial, sans-serif; /* ゴシック体のフォントを優先して指定 */
+  font-weight: bold; /* テキストを太字にする */
+  margin: 0;
+  padding: 0;
+  background-color: coral;
+}
+
+.question-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #C40C0C;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-weight: bold; /* テキストを太字にする */
+}
+
+#question-text {
+  font-weight: bold; /* テキストを太字にする */
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#options-container button {
+  font-weight: bold; /* テキストを太字にする */
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FF8A08;
+  color: #FFC100;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#options-container button:hover {
+  font-weight: bold; /* テキストを太字にする */
+  background-color: #FF6500;
+}
+
+.hidden {
+  display: none;
+}
+
+#answer-container {
+  margin-top: 20px;
+}
+
+#answer {
+  font-size: 16px;
+  font-weight: bold;
+}
